@@ -1,0 +1,50 @@
+[data-slide] { // so that there is initial fade-in effect
+	display: none;
+}
+
+// fields going to the same line
+.field.half {
+	width: 50%;
+	float: left;
+}
+.field.half.name {
+	padding-right: 10px;
+}
+.field.half.email {
+	padding-left: 10px;
+}
+.field label {
+	text-align: left;
+}
+
+.streetView-wrapper iframe{
+    pointer-events: none;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+#one li {
+  text-align: left;
+}
+
+.icons img {
+  height: 60px;
+}
+
+#banner p {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+#banner p strong {
+  font-weight: 900;
+}
