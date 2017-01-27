@@ -98,13 +98,17 @@
 			var createGlobalFunction = function(name, $obj) {
 				window[name] = function() {
 					var options = JSON.parse( $obj.attr("data-slide") ); // data() is not optimal (too smart)
-					var currentValue = $obj.text();
-					var currentIndex = options.indexOf(currentValue);
-					if (currentIndex !== -1) {
-						options.splice(currentIndex, 1);
-					}
 
-					var newText = options[Math.floor(options.length * Math.random())];
+					var currentIndex = parseInt($obj.attr("data-index"));
+					
+					
+					var newText = options[currentIndex];
+					if(currentIndex!=options.length - 1) {
+						currentIndex++;
+					} else{
+						currentIndex=0;
+					}
+					$obj.attr("data-index",currentIndex);
 
 					if ($obj.is(":visible")) {
 						$obj.fadeOut(800, function() {
