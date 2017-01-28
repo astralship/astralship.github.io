@@ -2,9 +2,9 @@
 #
 
 # Site settings
-title: astralship
+title: astralship.org
 description: We are solutionares and changemakers converting chapel in the North Wales into an environtment to realise human potential and heal the planet.🌎&nbsp;&nbsp;🌍&nbsp;&nbsp;🌏
-owner: Your Name # or company name
+owner: astralship.org # or company name
 first_published: 2016 # if migrating another site, the year of your first publish
 email: email@genesis.re
 baseurl: "" # the subpath of your site, e.g. /blog

@@ -1,5 +1,14 @@
 <!-- Footer -->
 <footer id="footer">
+
+  <ul class="icons" style="margin-top:10px">
+    <li><img src="images/icons/1.png"></li>
+    <li><img src="images/icons/2.png"></li>
+    <li><img src="images/icons/3.png"></li>
+    <li><img src="images/icons/4.png"></li>
+    <li><img src="images/icons/5.png"></li>
+  </ul>
+
   <ul class="icons">
     {% for socloc in site.social %}
     {% if socloc[1] %}
@@ -14,7 +23,7 @@
     {% endfor %}
   </ul>
   <ul class="copyright" style="font-size: 0.7em">
-    <li>&copy; {% assign thisyear = site.time | date: "%Y" %}
+    <li>{% assign thisyear = site.time | date: "%Y" %}
     {% if site.first_published %}
       {% capture diff %}{{ site.first_published | minus:thisyear }}{% endcapture %}
       {% if diff contains '-' %}{{ site.first_published }},{% endif %}
@@ -23,5 +32,6 @@
     {% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>
     <li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
     <li>Built with: <a href="http://jekyllrb.com" target="_blank">Jekyll</a></li>
+    <li>Hosted on: <a href="https://github.com/astralship/astralship.github.io" target="_blank">Github</a></li>
   </ul>
 </footer>
