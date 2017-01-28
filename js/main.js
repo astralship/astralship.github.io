@@ -152,6 +152,13 @@
 			});
 
 
+			if (document.location.search.indexOf("?menu") !== -1) {
+				localStorage.menu = true;
+			}
+			if (localStorage.menu) {
+				$("#nav").css("display", "block");
+			}
+
 	});
 
 })(jQuery);
