@@ -7,7 +7,7 @@ description: We are solutionares and changemakers converting chapel in the North
 owner: Your Name # or company name
 first_published: 2016 # if migrating another site, the year of your first publish
 email: email@genesis.re
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://astralship.org" # the base hostname & protocol for your site
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site
