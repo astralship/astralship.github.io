@@ -67,3 +67,62 @@
   vertical-align: baseline;
   border-radius: .25em;
 }
+
+
+// BORROWED FROM DAN'S WEBSITE
+
+#timeline {
+  background: black;
+}
+
+.timeline {
+  list-style-type: none;
+  position: relative;
+  padding-left: 1em;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline:before {
+  display: block;
+  content: '';
+  height: 100%;
+  border-left: solid 1px #6c87da;
+  position: absolute;
+  left: 3px;
+  top: 0;
+  margin: 8px 0;
+}
+
+.timeline li {
+  position: relative;
+  padding: 0 1em;
+  margin-bottom: 2em;
+}
+
+.timeline li label {
+  display: block;
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  left: -1em;
+  background: #6c87da;
+  border-radius: 50%;
+  top: 8px;
+}
+
+.timeline p {
+  font-size: 14pt;
+  font-weight: 100;
+  margin-top: 0;
+  color: #aaa;
+}
+
+.timeline strong {
+  font-size: 16pt;
+}
+
+.timeline li.done strong {
+  opacity: 0.4;
+}
