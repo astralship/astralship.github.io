@@ -1,6 +1,3 @@
-var width = window.innerWidth;
-var height = window.innerHeight;
-
 function range(x) {
   var xs = [];
   for (var i = 0; i < x; i++) {
@@ -21,10 +18,10 @@ function rgba(r, g, b, a) {
   return 'rgba(' + [r, g, b, a].join(',') + ')';
 }
 
-function Particle() {
+function Particle(dimension) {
   return {
-    x: Math.floor(Math.random() * window.innerWidth),
-    y: Math.floor(Math.random() * window.innerHeight),
+    x: Math.floor(Math.random() * dimension.width),
+    y: Math.floor(Math.random() * dimension.height),
     i: (Math.random() - .5) / 2,
     j: (Math.random() - .5) / 2
   };
@@ -36,53 +33,54 @@ function move(particle) {
   return particle;
 }
 
-function bounce(particle) {
+function bounce(particle, dimension) {
   var x = particle.x;
   var y = particle.y;
 
-  if (x <= 0 || x > width) particle.i = -particle.i;
-  if (y <= 0 || y > height) particle.j = -particle.j;
+  if (x <= 0 || x > dimension.width) particle.i = -particle.i;
+  if (y <= 0 || y > dimension.height) particle.j = -particle.j;
 
   return particle;
 }
 
-function update(particle) {
+function update(particle, dimension) {
   return (
     bounce(
-      move(
-        particle
-      )
+      move(particle), dimension
     )
   )
 }
 
-function simulate(particles) {
-  return particles.map(update);
+function simulate(particles, dimension) {
+  return particles.map(function(particle) {
+    return update(particle, dimension);
+  });
 }
 
-function attach(particles, canvas) {
+function attach(particles, canvas, dimension) {
   var queue = [];
-  var mouse = { x: width / 2, y: height / 2 };
+  var mouse = { x: dimension.width / 2, y: dimension.height / 2 };
   var context = canvas.getContext('2d');
 
-  canvas.width = width;
-  canvas.height = height;
+  canvas.width = dimension.width;
+  canvas.height = dimension.height;
 
   window.addEventListener('mousemove', function(e) {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
   });
 
-  window.addEventListener('click', function(e) {
-    var particle = Particle();
-    particle.x = e.clientX;
-    particle.y = e.clientY;
-    queue.push(particle);
-  });
+  // NO CLICKING
+  // window.addEventListener('click', function(e) {
+  //   var particle = Particle();
+  //   particle.x = e.clientX;
+  //   particle.y = e.clientY;
+  //   queue.push(particle);
+  // });
 
-  function next(particles) {
-    var scene = realize(particles, mouse);
-    render(scene, context);
+  function next(particles, dimension) {
+    var scene = realize(particles, mouse, dimension);
+    render(scene, context, dimension);
 
     if (queue.length > 0) {
       particles = particles.concat(queue);
@@ -90,20 +88,20 @@ function attach(particles, canvas) {
     }
 
     requestAnimationFrame(function() {
-      next(simulate(particles))
+      next(simulate(particles, dimension), dimension);
     });
   }
 
-  next(particles);
+  next(particles, dimension);
 }
 
-function realize(particles, light) {
+function realize(particles, light, dimension) {
   var points = [];
   var lines = [];
 
   particles.forEach(function(particle) {
-    var r = Math.floor(30 + (particle.x / width) * 50);
-    var g = Math.floor(50 + (particle.y / height) * 50);
+    var r = Math.floor(30 + (particle.x / dimension.width) * 50);
+    var g = Math.floor(50 + (particle.y / dimension.height) * 50);
     var a = .2 + Math.max(0, 500 - distance(light, particle)) / 500;
 
     points.push({
@@ -130,8 +128,8 @@ function realize(particles, light) {
   return { points, lines };
 }
 
-function render(scene, context) {
-  context.clearRect(0, 0, width, height);
+function render(scene, context, dimension) {
+  context.clearRect(0, 0, dimension.width, dimension.height);
 
   scene.lines.forEach(function(line) {
     context.strokeStyle = line.color;
@@ -153,9 +151,19 @@ function render(scene, context) {
 var canvases = document.getElementsByTagName('canvas');
 
 for (var i = 0; i < canvases.length; i++) {
+  var dimension = getDimension(canvases[i])
   attach(
-    range(100).map(Particle),
-    canvases[i]
+    range(100).map(function(number) {
+      return Particle(dimension);
+    }),
+    canvases[i],
+    dimension
   );
+}
+
+function getDimension(canvasElement) {
+  // We have jQuery so can afford it
+  var parent = $(canvasElement).parent();
+  return { width: parent.width(), height: parent.height() };
 }
 
