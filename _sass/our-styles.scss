@@ -73,10 +73,13 @@
 
 canvas {
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #timeline {
   background: black;
+  position: relative;
 }
 
 .timeline {

@@ -164,6 +164,6 @@ for (var i = 0; i < canvases.length; i++) {
 function getDimension(canvasElement) {
   // We have jQuery so can afford it
   var parent = $(canvasElement).parent();
-  return { width: parent.width(), height: parent.height() };
+  return { width: parent.outerWidth(), height: parent.outerHeight() };
 }
 
