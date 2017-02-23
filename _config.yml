@@ -13,14 +13,16 @@ url: "" # the base hostname & protocol for your site
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site
 social:
+
+
+  # linkedin-square: https://www.linkedin.com/company/astral-dynamics-cyf
+  facebook-official: https://www.facebook.com/astralship
   twitter: https://twitter.com/theastralship
-  github: https://github.com/AstralDynamics
-  linkedin-square: https://www.linkedin.com/company/astral-dynamics-cyf
-  facebook-official: https://www.facebook.com/AstralDynamicsCyf
   #ngoogle-plus-square: https://plus.google.com/u/0/+<username>
   #email: /contact/
   #flickr:
-  #instagram:
+  instagram: https://instagram.com/astralship
+  github: https://github.com/astralship
   #youtube-square:
   #spotify:
   #stack-overflow:
