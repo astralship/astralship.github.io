@@ -153,7 +153,7 @@ var canvases = document.getElementsByTagName('canvas');
 for (var i = 0; i < canvases.length; i++) {
   var dimension = getDimension(canvases[i])
   attach(
-    range(100).map(function(number) {
+    range(300).map(function(number) {
       return Particle(dimension);
     }),
     canvases[i],
