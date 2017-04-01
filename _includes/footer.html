@@ -1,12 +1,12 @@
 <!-- Footer -->
 <footer id="footer">
 
-  <ul>
+  <ul class="copyright" style="font-size: 0.7em">
     {% assign sorted_pages = site.pages | sort:"order" %}
     {% for node in sorted_pages %}
       {% if node.title %}
         {% if node.order %}
-        <li><a href="{{node.url}}">{{node.title}}</a></li>
+          <li><a href="{{node.url}}">{{node.title}}</a></li>
         {% endif %}
       {% endif %}
     {% endfor %}
