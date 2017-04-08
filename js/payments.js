@@ -9,6 +9,7 @@ var rewards = [
 
 var config = {
   stripe_pk: "pk_live_2DAE0pRgfhU4eH7NxiQ4jLbD",
+  // stripe_pk: 'pk_test_gorhMMGRx3KOzCuhkkwX6iah',
   stripe_endpoint: "https://genesis-charge.herokuapp.com/charge",
   // stripe_endpoint: "http://localhost:3002/charge",
   stripe_name: "astralship.org",
@@ -72,8 +73,7 @@ _selectReward(config.reward); // TODO: maybe self-invoking anonymous function?
 
 
 var stripePopup = StripeCheckout.configure({
-  // key: 'pk_live_2DAE0pRgfhU4eH7NxiQ4jLbD',
-  key: 'pk_test_gorhMMGRx3KOzCuhkkwX6iah',
+  key: config.stripe_pk,
   image: 'images/Genesis-logo.png',
   locale: 'auto',
   token: function(token) { // Token is coming from the Stripe popup 
