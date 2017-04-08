@@ -74,10 +74,10 @@ _selectReward(config.reward); // TODO: maybe self-invoking anonymous function?
 var stripePopup = StripeCheckout.configure({
   // key: 'pk_live_2DAE0pRgfhU4eH7NxiQ4jLbD',
   key: 'pk_test_gorhMMGRx3KOzCuhkkwX6iah',
-  image: 'genesis.png',
+  image: 'images/Genesis-logo.png',
   locale: 'auto',
   token: function(token) { // Token is coming from the Stripe popup 
-    console.log(token);
+    console.log("Stripe token:", token);
     $('.payments').css({visibility: "hidden"});
 
     var data = {
@@ -89,7 +89,7 @@ var stripePopup = StripeCheckout.configure({
     $.post(config.stripe_endpoint, data, function(response) {
       console.log(response);
       $("#thankyou").show();
-    }, function(response) {
+    }).fail(function(response) {
       console.error(response);
       $("#error").show();
       $("#exact-error").text(response.message);
