@@ -133,3 +133,43 @@ canvas {
 .timeline li.done strong {
   opacity: 0.4;
 }
+
+
+
+.markupButt a {
+  margin-right: 3px;
+}
+.markupDesc .description { 
+  display: none;
+  padding: 5px 0 0 5px;
+}
+.markupDesc .description.active { /* TODO: add some fancy transition effect: https://www.impressivewebs.com/animate-display-block-none/ */
+  display: block;
+}
+
+
+#stripe-form { height: 35px; }
+#stripe-button {
+
+  display: inline-block;
+  margin-bottom: 10px;
+  box-shadow: rgba(255, 255, 255, 0.247059) 0px 1px 0px 0px inset;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  height: 30px;
+  min-height: 30px;
+  position: relative;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+  width: 140px;
+  align-self: flex-start;
+  perspective-origin: 58.5312px 15px;
+  transform-origin: 58.5312px 15px;
+  background: rgb(18, 117, 255) linear-gradient(rgb(125, 197, 238), rgb(0, 140, 221) 85%, rgb(48, 162, 228)) repeat scroll 0% 0% / auto padding-box border-box;
+  border: 0px none rgb(255, 255, 255);
+  border-radius: 4px 4px 4px 4px;
+  font: normal normal bold normal 14px / 30px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  outline: rgb(255, 255, 255) none 0px;
+  padding: 0px 12px;
+  text-decoration: none;
+}
