@@ -9,8 +9,8 @@ var rewards = [
 
 var config = {
   stripe_pk: "pk_live_2DAE0pRgfhU4eH7NxiQ4jLbD",
-  // stripe_endpoint: "https://genesis-charge.herokuapp.com/charge",
-  stripe_endpoint: "http://localhost:3002/charge",
+  stripe_endpoint: "https://genesis-charge.herokuapp.com/charge",
+  // stripe_endpoint: "http://localhost:3002/charge",
   stripe_name: "astralship.org",
   stripe_description: "pre-Kickstarter campaign",
   BTC: "17zVA88xk4Ma7Cza4NXGYcP4Z1Qz7TUdzV", // TODO: reliably generate QR code http://stackoverflow.com/questions/25339587/how-do-i-generate-a-qr-code-for-a-bitcoin-address-with-amount
