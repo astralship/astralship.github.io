@@ -31,7 +31,7 @@ var currencies = [
 var markupButt = "";
 var markupDesc = "";
 rewards.forEach(function(reward) {
-  markupButt += "<a class='pure-button' data-reward='" + reward.name + "'><strong>£" + reward.cost + "</strong> " + reward.name + "</div>"
+  markupButt += "<a class='button' data-reward='" + reward.name + "'><strong>£" + reward.cost + "</strong> " + reward.name + "</div>"
   markupDesc += "<div class='description' data-reward='" + reward.name + "'>" + reward.description + "</div>"
 });
 
@@ -54,11 +54,11 @@ var _selectReward = function(reward) {
   $(".markupDesc").find("[data-reward=" + reward.name + "]").addClass("active");
 
   
-  var active = $(".markupButt").find(".pure-button-primary");
+  var active = $(".markupButt").find(".special");
   if (active.length > 0) {
-    active.removeClass("pure-button-primary");
+    active.removeClass("special");
   }
-  $(".markupButt").find("[data-reward=" + reward.name + "]").addClass("pure-button-primary");
+  $(".markupButt").find("[data-reward=" + reward.name + "]").addClass("special");
 
   // updating PayPal variables
 

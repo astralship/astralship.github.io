@@ -139,6 +139,14 @@ canvas {
 .markupButt a {
   margin-right: 3px;
 }
+
+.markupButt .button {
+  padding: 0 1em;
+}
+.markupButt .button.special strong {
+  color: white;
+}
+
 .markupDesc .description { 
   display: none;
   padding: 5px 0 0 5px;
