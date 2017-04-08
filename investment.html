@@ -5,8 +5,7 @@ subtitle: Working together for a better future
 order: 20
 ---
 
-	<div class="wip">Work in progress</div>
-
+	<a href="#ready" class="ready">We are ready, proceed to payment</a>
 
 
 	<h3>Holding company</h3>
@@ -100,4 +99,47 @@ order: 20
 	<p>At this stage we are planning crowdfunding campaign that is achievable and realistic. Once we prove that everything works as expected we will be ready for much larger investments to acquire real-estate in other worldwide and European locations <em>(London, Berlin, Amsterdam, Barcelona)</em> - international hubs with access to creative talent.</p>
 
 	<p>First ship in Snowdonia is to demonstrate that is not only economically sustainable but also a facilitates the highest degrees of human creativity, collaboration and productivity - see <a href="flow.html">flow states</a>. Once we've proved this we'll build other ships in exceptional locations around the world. We believe it's quite possible for a talent young creatives and developers to be able to travel and work on voyages without ever needing to take up a year in year out 9-5 conventional job to fund their way.</p>
+
+	<a name="ready">
+	<h3>Getting ready</h3>
+	<script src="https://checkout.stripe.com/checkout.js"></script> <!-- saving some bandwidth -->
+
+
+	<p>If you are at this point - we assume you have a decent understanding the <strong>astralship</strong></p>
+	<p>We are going to run Kickstarter campaign and before it goes live we offer discounted rewards, see <a href="investment">investment</a>.</p>
+	<p>We operate in a fully transparent (open-source) manner, see <a href="https://www.facebook.com/astralship/videos/244750819331592/">video on FB</a> explaining our tools.</p>
+	<p>We are not lawyers, accountants, significant others - we are on the <a href="mission">mission</a> to heal the planet.</p>
+	<p>We kindly appreciate all the financial contributions - money will be put to a good use, primarily <a href="refurbishment">refurbishment</a>.</p>
+	<p>We hope this website is easy to use, in case of any question please <a href="contact">contact us</a> directly.</p>
+
+	<br><br>
+
+	<span id="thankyou" style="display:none; font-weight: bold;">Thank you so much!<br>That is more than awesome.<br>You are the winner!</span> <!-- TODO: Add social media sharing -->
+	<span id="error" style="display:none; font-weight: bold;">Error: <span id="exact-error"></span> <a href="javascript:location.reload()">Reload</a></span>
+
+	<span class="payments">
+	<h3>Select your reward:</h3>
+
+	<div class="markupButt"></div>
+	<div class="markupDesc"></div>
+
+	<br><br>
+
+	<a href="" id="stripe-button" class="payments"><span style="display: block; min-height: 30px;">Pay with Card</span></a>
+
+	<br><br>
+
+	<form name="_xclick" action="https://www.paypal.com/uk/cgi-bin/webscr" method="post" class="payments">
+	  <input type="hidden" name="cmd" value="_xclick">
+	  <input type="hidden" name="business" value="" id="paypal-business">
+	  <input type="hidden" name="currency_code" value="" id="paypal-currency-code">
+	  <input type="hidden" name="item_name" value="" id="paypal-item-name">
+	  <input type="hidden" name="amount" value="" id="paypal-amount">
+	  <input type="hidden" name="no_shipping" value="1">
+	  <input type="image" src="images/paypal.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!" style="height:40px">
+	</form>
+
+	<input disabled value="17zVA88xk4Ma7Cza4NXGYcP4Z1Qz7TUdzV" style="color: black; padding: 5px; width: 410px;">
+
+	</span>
 

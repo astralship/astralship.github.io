@@ -110,5 +110,5 @@ $('#stripe-button').on('click', function(e) {
 
 // Close Checkout on page navigation
 $(window).on('popstate', function() {
-  handler.close();
+  stripePopup.close();
 });

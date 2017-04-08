@@ -68,6 +68,20 @@
   border-radius: .25em;
 }
 
+.ready {
+  margin-bottom: 40px;
+  font-size: 2em;
+  background-color: #066600;
+  display: inline-block;
+  padding: .2em .6em .3em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
 
 // BORROWED FROM DAN'S WEBSITE
 
@@ -150,6 +164,7 @@ canvas {
 .markupDesc .description { 
   display: none;
   padding: 5px 0 0 5px;
+  font-style: italic;
 }
 .markupDesc .description.active { /* TODO: add some fancy transition effect: https://www.impressivewebs.com/animate-display-block-none/ */
   display: block;
