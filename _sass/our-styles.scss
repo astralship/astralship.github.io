@@ -210,6 +210,10 @@ canvas {
   padding-bottom: 3px;
 }
 
+ul.margin li {
+  margin-bottom: 8px;
+}
+
 @media (max-width: 480px) { // Too much stuff, overllaping hamburger
   .hide-on-mobile {
     display: none;
