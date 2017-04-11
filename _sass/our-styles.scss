@@ -166,7 +166,7 @@ canvas {
   padding: 5px 0 0 5px;
   font-style: italic;
 }
-.markupDesc .description.active { /* TODO: add some fancy transition effect: https://www.impressivewebs.com/animate-display-block-none/ */
+.markupDesc .description.active { // TODO: add some fancy transition effect: https://www.impressivewebs.com/animate-display-block-none/
   display: block;
 }
 
@@ -195,4 +195,23 @@ canvas {
   outline: rgb(255, 255, 255) none 0px;
   padding: 0px 12px;
   text-decoration: none;
+}
+
+
+#header h1 a {
+  display: inline
+}
+
+#header .investment {
+  margin-left: 10px;
+  font-size: 0.7em;
+  text-transform: initial;
+  border-bottom: 2px dotted white;
+  padding-bottom: 3px;
+}
+
+@media (max-width: 480px) { // Too much stuff, overllaping hamburger
+  .hide-on-mobile {
+    display: none;
+  }
 }
