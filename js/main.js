@@ -159,6 +159,11 @@
 			// 	$("#nav").css("display", "block");
 			// }
 
+			if (document.referrer.indexOf("astralship") === -1) {
+				$(".deep-link-outside-show").show();
+			}
+			
+
 	});
 
 })(jQuery);
