@@ -214,6 +214,11 @@ ul.margin li {
   margin-bottom: 8px;
 }
 
+h3 em {
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
 @media (max-width: 480px) { // Too much stuff, overllaping hamburger
   .hide-on-mobile {
     display: none;
