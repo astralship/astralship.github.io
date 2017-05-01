@@ -150,10 +150,12 @@ function render(scene, context, dimension) {
 
 var canvases = document.getElementsByTagName('canvas');
 
+var particlesCount = Math.min(window.innerWidth / 6, 200);
+
 for (var i = 0; i < canvases.length; i++) {
   var dimension = getDimension(canvases[i])
   attach(
-    range(200).map(function(number) {
+    range(particlesCount).map(function(number) {
       return Particle(dimension);
     }),
     canvases[i],

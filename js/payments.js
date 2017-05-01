@@ -74,7 +74,7 @@ _selectReward(config.reward); // TODO: maybe self-invoking anonymous function?
 
 var stripePopup = StripeCheckout.configure({
   key: config.stripe_pk,
-  image: 'images/Genesis-logo.png',
+  image: 'images/logo/astralship-final-1-square-black-margin-120.png',
   locale: 'auto',
   token: function(token) { // Token is coming from the Stripe popup 
     console.log("Stripe token:", token);
