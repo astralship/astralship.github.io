@@ -1,3 +1,7 @@
+img {
+  max-width: 100% !important;
+}
+
 [data-slide] { // so that there is initial fade-in effect
 	display: none;
 }
