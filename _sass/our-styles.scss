@@ -244,3 +244,20 @@ h3 em {
   width: 100%;
   height: 100%;
 }
+
+h2 a {
+  border-bottom: dotted 3px
+}
+
+.strike{
+    position: relative;
+}
+
+.strike::after{
+    content: '';
+    border-bottom: 4px solid white;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+}
