@@ -22,7 +22,8 @@
 			$wrapper = $('#page-wrapper'),
 			$banner = $('#banner'),
 			$header = $('#header');
-
+			
+		/* THis was causing a mess so Liam removed it
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
 
@@ -30,7 +31,7 @@
 				window.setTimeout(function() {
 					$body.removeClass('is-loading');
 				}, 100);
-			});
+			});*/
 
 		// Mobile?
 			if (skel.vars.mobile)
