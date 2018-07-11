@@ -959,22 +959,19 @@ $baseurl: '{{ site.baseurl }}/images';
 	}
 
 /* Spotlight */
-
 	.spotlight {
 		@include vendor('align-items', 'center');
 		@include vendor('display', 'flex');
-
 		.image {
+
 			@include vendor('order', '1');
 			border-radius: 0;
 			width: 40%;
-
 			img {
 				border-radius: 0;
 				width: 100%;
 			}
 		}
-
 
 		.content {
 			@include padding(2em, 4em);
@@ -992,6 +989,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			&:nth-child(#{$i}) {
 				background-color: rgba(0,0,0, $j);
+				color: rgb(130,135,135);
 			}
 		}
 
@@ -1055,18 +1053,17 @@ $baseurl: '{{ site.baseurl }}/images';
 			width: 60%;
 		}
 
-
-
 		&:nth-child(2n) {
 			@include vendor('flex-direction', 'row-reverse');
+
 		}
 
 		@for $i from 1 through _misc(max-spotlights) {
-			$j: 0.075 * $i;
+			$j: 0.175 * $i;
 
 			&:nth-child(#{$i}) {
 				background-color: rgba(0,0,70, $j);
-		
+				color: rgb(100,120,150);
 			}
 		}
 
@@ -1074,7 +1071,6 @@ $baseurl: '{{ site.baseurl }}/images';
 			.image {
 				width: 45%;
 			}
-
 			.content {
 				width: 55%;
 			}
