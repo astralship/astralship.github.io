@@ -1107,6 +1107,8 @@ $baseurl: '{{ site.baseurl }}/images';
 	.spotlight3 {
 		@include vendor('align-items', 'center');
 		@include vendor('display', 'flex');
+		border: 1px solid black;
+		margin: 50px 0px 50px 0px;
 
 		.image {
 			@include vendor('order', '1');
@@ -1120,6 +1122,8 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	
 		.content {
+			
+			
 			@include padding(2em, 4em);
 			@include vendor('order', '2');
 			max-width: 48em;

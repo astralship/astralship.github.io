@@ -72,6 +72,23 @@ img {
   border-radius: .25em;
 }
 
+.quote {
+  font-size: 1.6em;
+  font-weight:200;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  margin: 50px 150px 0px 150px;
+}
+
+.quoteAttrib {
+  font-size: 1.6em;
+  color: #AAA;
+  font-weight:200;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  margin: 0px 150px 150px 150px;
+}
+
 .ready {
   margin-bottom: 40px;
   font-size: 2em;
