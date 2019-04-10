@@ -1107,8 +1107,11 @@ $baseurl: '{{ site.baseurl }}/images';
 	.spotlight3 {
 		@include vendor('align-items', 'center');
 		@include vendor('display', 'flex');
-		border: 1px solid black;
-		margin: 50px 0px 50px 0px;
+		
+		background: white;
+		border-radius: 4px;
+		overflow: hidden;
+		box-shadow: 0 0 31px 4px rgba(0, 0, 0, 0.1);
 
 		.image {
 			@include vendor('order', '1');
@@ -1183,7 +1186,10 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	@mixin wrapper($p) {
 		background-color: _palette($p, bg);
+
 		color: _palette($p, fg);
+
+		
 
 		// Basic
 
@@ -1371,6 +1377,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	.wrapper {
 		@include padding(6em, 0);
 
+
 		> .inner {
 			width: 60em;
 			margin: 0 auto;
@@ -1405,6 +1412,10 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		&.style5 {
+			@include wrapper(accent7);
+		}
+
+		&.style6 {
 			@include wrapper(accent7);
 		}
 
