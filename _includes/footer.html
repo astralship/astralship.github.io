@@ -34,13 +34,7 @@
     {% endfor %}
   </ul>
   <ul class="copyright" style="font-size: 0.7em">
-    <li>{% assign thisyear = site.time | date: "%Y" %}
-    {% if site.first_published %}
-      {% capture diff %}{{ site.first_published | minus:thisyear }}{% endcapture %}
-      {% if diff contains '-' %}{{ site.first_published }},{% endif %}
-    {% endif %}
-    {{ thisyear }}
-    {% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>
+    <li>2017-2019 astralship.org</li>
     <li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
     <li>Built with: <a href="http://jekyllrb.com" target="_blank">Jekyll</a></li>
     <li>Hosted on: <a href="https://github.com/astralship/astralship.github.io" target="_blank">Github</a></li>
